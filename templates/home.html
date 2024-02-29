@@ -5,10 +5,6 @@
 {% block head %}
 
 <style>
-    body {
-        overflow: hidden;
-    }
-
     .full-screen {
         position: absolute;
         top: 0;
@@ -24,7 +20,10 @@
 
 <div class="container-fluid p-0">
     <img src="{{ url_for('static', filename='images/running.jpg') }}" alt="Running Image" class="img-fluid full-screen">
-    <!-- Your content goes here -->
-    <p>NEVER UNDERESTIMATE THE INVESTMENT YOU MAKE IN YOURSELF</p>
+    <div class="position-absolute bottom-0 text-light w-100"
+    style="background-color: rgba(0, 0, 0, 0.5)">
+    <h2 class="p-4" style="font-size: 64px;">ShapeSync</h2>
+    <p class="p-4 m-0" style="font-size: 32px">NEVER UNDERESTIMATE THE INVESTMENT YOU MAKE IN YOURSELF</p>
+  </div>
 </div>
 {% endblock %}
