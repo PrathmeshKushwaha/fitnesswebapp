@@ -2,16 +2,41 @@
 
 {% block title %} ShapeSync {% endblock %}
 
+{% block head %}
+
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .maintxt {
+        width: 100%;
+        text-align: center;
+    }
+
+    .maintxt img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+{% endblock %}
+
 {% block content %}
 
 <div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-8 col-centered">
-            <div class="maintxt">
-                
-                <img src="{{ url_for('static', filename='images/running.jpg') }}" class="img-responsive">
-            </div>
-        </div>
+    <div class="maintxt">
+        <img src="{{ url_for('static', filename='images/running.jpg') }}" alt="Running Image">
     </div>
 </div>
 
