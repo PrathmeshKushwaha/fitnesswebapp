@@ -26,6 +26,17 @@
       #navbarToggleExternalContent.show {
         display: block;
       }
+      .nav-list li span a{
+        text-decoration: none;
+        font-size: 28px;
+        color: whitesmoke;
+      }
+      .nav-list li{
+        padding:8px;
+      }
+      .nav-list li:hover{
+        background-color: rgb(63, 63, 63);
+      }
     </style>
 </head>
 <body>
@@ -53,8 +64,14 @@
   </nav>
   <div class="collapse" id="navbarToggleExternalContent">
     <div class="bg-dark p-4">
-      <span class="text-muted"><a href="/">Home</a></span>
-      <span class="text-muted"><a href="Dashboard.html">Dashboard</a></span>
+      <ul class="nav-list">
+        <li>
+          <span class="text-muted"><a href="/">Home</a></span>
+        </li>
+        <li>
+          <span class="text-muted"><a href="Dashboard.html">Dashboard</a></span>
+        </li>
+      </ul>
     </div>
   </div>
   {% block content %} {% endblock %}
