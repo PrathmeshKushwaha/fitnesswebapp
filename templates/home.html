@@ -21,31 +21,18 @@
 
 {% block content %}
 
-<div class="row">
-    <div class="col">
-        <div class="container-fluid p-0">
-            <img src="{{ url_for('static', filename='images/running.jpg') }}" alt="Running Image" class="img-fluid full-screen">
-            <div class="position-absolute bottom-0 text-light w-100" style="background-color: rgba(0, 0, 0, 0.5)">
-                <div class="row">
-                    <div class="col-6 col-sm-3">
-                        <h2 class="p-4" style="font-size: 64px;">ShapeSync</h2>
-                    </div>
-                    <div class="col-6 col-sm-3" style="padding-top: 50px; padding-left: 20px;">
-                        <a href='signup.html'><button type="button" class="btn btn-secondary btn-lg">Get Started</button></a>
-                    </div>
-                </div>
-                <p class="p-4 m-0" style="font-size: 32px">NEVER UNDERESTIMATE THE INVESTMENT YOU MAKE IN YOURSELF</p>
-            </div>
-        </div>
-    </div>
-    <div class="col grid">
+<div class="container-fluid p-0">
+    <img src="{{ url_for('static', filename='images/running.jpg') }}" alt="Running Image" class="img-fluid full-screen">
+    <div class="position-absolute bottom-0 text-light w-100" style="background-color: rgba(0, 0, 0, 0.5)">
         <div class="row">
-            <div class="col-6">
-                <div class="row">1.</div>
-                <div class="row">2.</div>
+            <div class="col-6 col-sm-3">
+                <h2 class="p-4" style="font-size: 64px;">ShapeSync</h2>
             </div>
-            <div class="col-6">3.</div>
+            <div class="col-6 col-sm-3" style="padding-top: 50px; padding-left: 20px;">
+            <a href='signup.html'><button type="button" class="btn btn-secondary btn-lg">Get Started</button></a>
+            </div>
         </div>
+        <p class="p-4 m-0" style="font-size: 32px">NEVER UNDERESTIMATE THE INVESTMENT YOU MAKE IN YOURSELF</p>
     </div>
 </div>
 
