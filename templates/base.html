@@ -8,12 +8,22 @@
     <style>
       .navbar {
         width: 25%; 
-        margin: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 5;
       }
     
       #navbarToggleExternalContent {
         width: 25%; 
-        left: 0; 
+        left: 0;
+        position: fixed;
+        top: 25px;
+        z-index: 4;
+        display: none;
+      }
+      #navbarToggleExternalContent.show {
+        display: block;
       }
     </style>
 </head>
