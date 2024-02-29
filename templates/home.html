@@ -5,39 +5,26 @@
 {% block head %}
 
 <style>
+    /* Optionally, you can add custom styles here */
     body {
-        margin: 0;
         overflow: hidden;
     }
 
-    .container {
-        position: relative;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .maintxt {
-        width: 100%;
-        text-align: center;
-    }
-
-    .maintxt img {
+    .full-screen {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        z-index: -1; /* Place the image behind other content */
     }
 </style>
 {% endblock %}
 
 {% block content %}
 
-<div class="container">
-    <div class="maintxt">
-        <img src="{{ url_for('static', filename='images/running.jpg') }}" alt="Running Image">
-    </div>
+<div class="container-fluid p-0">
+    <img src="{{ url_for('static', filename='images/running.jpg') }}" alt="Running Image" class="img-fluid full-screen">
+    <!-- Your content goes here -->
 </div>
-
 {% endblock %}
