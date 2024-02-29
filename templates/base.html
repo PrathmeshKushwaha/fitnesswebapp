@@ -33,15 +33,10 @@
 </head>
 <body>
   <nav class="navbar navbar-dark bg-dark">
-    <div class="navbar-header">
-      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Running Image" class="img-fluid full-screen">
-    </div>
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <!-- Use Bootstrap grid system to create two columns -->
+        <span class="navbar-toggler-icon"><img src="{{ url_for('static', filename='images/logo.png') }}"></span>
+    </button>
       <div class="row">
         <div class="col-sm-6">
           <ul class="nav navbar-nav">
