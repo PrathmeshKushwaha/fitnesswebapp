@@ -19,33 +19,33 @@
         width: 25%; 
         left: 0;
         position: fixed;
-        top: 25px;
+        top: 50px;
         z-index: 4;
         display: none;
       }
       #navbarToggleExternalContent.show {
         display: block;
       }
-      .navbar-head img {
-        width: 50px;
-      }
     </style>
 </head>
 <body>
   <nav class="navbar navbar-dark bg-dark">
-    <div class="container-fluid">
+    <div class="container-fluid".
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"><img src="{{ url_for('static', filename='images/logo.png') }}"></span>
-    </button>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand float-left" href="#">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="navbar-logo">
+      </a>
       <div class="row">
         <div class="col-sm-6">
           <ul class="nav navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#"><span class="glyphicon glyphicon-user"></span> SignUp</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><button type="button" class="btn btn-secondary"><span class="glyphicon glyphicon-user">SignUp</span></button></a></li>
           </ul>
         </div>
         <div class="col-sm-6">
           <ul class="nav navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><button type="button" class="btn btn-secondary"><span class="glyphicon glyphicon-log-in">login</span></button></a></li>
           </ul>
         </div>
       </div>
