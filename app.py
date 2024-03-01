@@ -4,13 +4,15 @@ from flask_login import LoginManager, login_user
 from sqlalchemy.orm import relationship
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:@localhost/database"
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False  # Disable modification tracking
+app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///database.db'
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
-db = SQLAlchemy()  # Bind SQLAlchemy instance with Flask app
+db = SQLAlchemy()
 
-login_manager = LoginManager()
-login_manager.init_app(app)
+db.init_app(app)
+# @app.before_first_request
+# def create_table():
+#     db.create_all()
 
 class Users(db.Model):
     __tablename__ = 'user'
@@ -46,9 +48,9 @@ def agenda():
 def explore():
     return render_template('explore.html')
 
-@login_manager.user_loader
-def loader_user(uid):
-    return Users.query.get(uid)
+# @login_manager.user_loader
+# def loader_user(uid):
+#     return Users.query.get(uid)
 
 @app.route('/signup.html', methods=["GET", "POST"])
 def signup():
@@ -73,4 +75,5 @@ def login():
     return render_template("login.html")
 
 if __name__ == "__main__":
+    db.create_all()
     app.run(debug=True)

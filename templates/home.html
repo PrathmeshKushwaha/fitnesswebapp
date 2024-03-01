@@ -20,10 +20,10 @@
     }
     .overlay {
         position: absolute;
-        width: 100vw;
-        height: 100vh;
         transform: translate(-50%, -50%);
-        text-align: left;
+        bottom: 30%;
+        left: 50%;
+        text-align: center;
         color: white;
         font-size: 24px;
         z-index: 2; /* Ensure overlay is above image */
@@ -44,7 +44,9 @@
     <img class="background-image" src="./static/images/baackkk.jpg">
     <div id="grad"></div>
     <div class="overlay">
-        <p>NEVER UNDERESTIMATE THE INVESTMENT YOU MAKE IN YOURSELF</p>
+        <h3>Shape with your Friends</h3>
+        <p>Never underestimate the investment you made on yourself, Get started now</p>
+        <a href='login.html'><button type="button" class="btn btn-dark">Get Started</button></a>
     </div>
 </div>
 {% endblock %}
