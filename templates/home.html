@@ -5,35 +5,27 @@
 {% block head %}
 
 <style>
-    .full-screen {
-        position: absolute;
-        top: 0;
-        left: 0;
+    body{
+        padding: 0;
+    }
+    .container img{
+        position:relative;
         width: 100%;
         height: 100%;
-        z-index: -1;
+        object-fit: cover;
     }
-    .grid{
-        z-index: 1;
+    .container{
+        padding: 0;
+        margin: 0;
     }
-</style>
+</style>>
 {% endblock %}
 
 {% block content %}
-
-<div class="container-fluid p-0">
-    <img src="{{ url_for('static', filename='images/running.jpg') }}" alt="Running Image" class="img-fluid full-screen">
-    <div class="position-absolute bottom-0 text-light w-100" style="background-color: rgba(0, 0, 0, 0.5)">
-        <div class="row">
-            <div class="col-6 col-sm-3">
-                <h2 class="p-4" style="font-size: 64px;">ShapeSync</h2>
-            </div>
-            <div class="col-6 col-sm-3" style="padding-top: 50px; padding-left: 20px;">
-            <a href='signup.html'><button type="button" class="btn btn-secondary btn-lg">Get Started</button></a>
-            </div>
-        </div>
-        <p class="p-4 m-0" style="font-size: 32px">NEVER UNDERESTIMATE THE INVESTMENT YOU MAKE IN YOURSELF</p>
+<div class="container">
+    <img class="background-image" src="./static/images/baackkk.jpg">
+    <div class="overlay">
+        <p>NEVER UNDERESTIMATE THE INVESTMENT YOU MAKE IN YOURSELF</p>
     </div>
 </div>
-
 {% endblock %}

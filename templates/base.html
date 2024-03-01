@@ -16,7 +16,7 @@
       }
     
       #navbarToggleExternalContent {
-        width: 25%; 
+        width: 250px; 
         left: 0;
         position: fixed;
         top: 50px;
@@ -28,7 +28,7 @@
       }
       .nav-list li span a{
         text-decoration: none;
-        font-size: 28px;
+        font-size: 18px;
         color: whitesmoke;
       }
       .nav-list li{
@@ -37,43 +37,36 @@
       .nav-list li:hover{
         background-color: rgb(63, 63, 63);
       }
+      #navlink{
+        padding-right: 30px;
+        color: whitesmoke;
+        font-family: sans-serif;
+      }
+      .navbar-nav span:hover{
+        background-color: rgb(185, 0, 0);
+      }
+      .collapse{
+        padding-right: 50px;
+      }
     </style>
 </head>
 <body>
-  <nav class="navbar navbar-dark bg-dark">
-    <div class="container-fluid".
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="/static/images/logo.png" style="height:25px; padding:0px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand float-left" href="#">
-        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="navbar-logo">
-      </a>
-      <div class="row">
-        <div class="col-sm-6">
-          <ul class="nav navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#"><button type="button" class="btn btn-secondary"><span class="glyphicon glyphicon-user">SignUp</span></button></a></li>
-          </ul>
-        </div>
-        <div class="col-sm-6">
-          <ul class="nav navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#"><button type="button" class="btn btn-secondary"><span class="glyphicon glyphicon-log-in">login</span></button></a></li>
-          </ul>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <span><a class="nav-link" id="navlink" aria-current="page" href="/">HOME</a></span>
+          <span><a class="nav-link" id="navlink" href="explore.html">EXPLORE</a></span>
+          <span><a class="nav-link" id="navlink" href="Dashboard.html">DASHBOARD</a></span>
+          <span><a class="nav-link" id="navlink" href="login.html">LOGIN / SIGNUP</a></span>
         </div>
       </div>
     </div>
   </nav>
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-      <ul class="nav-list">
-        <li>
-          <span class="text-muted"><a href="/">Home</a></span>
-        </li>
-        <li>
-          <span class="text-muted"><a href="Dashboard.html">Dashboard</a></span>
-        </li>
-      </ul>
-    </div>
-  </div>
   {% block content %} {% endblock %}
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
